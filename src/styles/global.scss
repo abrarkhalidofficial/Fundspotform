@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  padding: 1em 2em;
 }
 .container__logo {
   margin-bottom: 1em;
@@ -105,9 +105,9 @@ body {
   background-color: #4ebfa5;
   border: none;
   border-radius: 8px;
-  padding: 0.7em 1em;
+  padding: 0.6em 1em;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.3em;
   width: 100%;
   margin: 1em 0em;
   cursor: pointer;
@@ -126,4 +126,101 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 0.5em;
+}
+.container__progress {
+  width: 100%;
+  margin: 1em 0em;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 12px;
+  border-radius: 8px;
+  max-width: 700px;
+}
+.container__progress__bar {
+  width: 100%;
+  height: 12px;
+  background-color: #405980;
+  border-radius: 8px;
+  position: relative;
+}
+.container__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: 0em auto;
+}
+.container__form__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.container__form__input__label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: white;
+  font-weight: bold;
+}
+.container__form__input__label span {
+  color: red;
+}
+.container__form__input__info {
+  font-size: 1em;
+  padding: 0.8em 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  color: white;
+  background-color: #47bfa53b;
+}
+.container__form__input__field {
+  padding: 0em 1em;
+  height: 45px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  border: 1px solid white;
+  outline: none;
+}
+.container__form__input__field:hover {
+  border-color: var(--e-global-color-9658649);
+}
+.container__form__input__field:focus {
+  border-color: var(--e-global-color-9658649);
+}
+.container__form__input__field:is(textarea) {
+  height: 150px;
+  padding: 0.5em 1em;
+}
+.container__form__input__options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 1em;
+}
+.container__form__input__option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  color: white;
+}
+.container__form__input__option:last-child {
+  margin-bottom: 0;
+}
+.container__form__input__option input {
+  margin-right: 0.5em;
+  width: 18px;
+  height: 18px;
+  color: white;
+  outline: none;
+  border: none;
+  accent-color: #4ebfa5;
+}
+.container__form__input__error {
+  color: white;
+  font-size: 1em;
+  margin-top: 0.5em;
 }
