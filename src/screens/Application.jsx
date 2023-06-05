@@ -53,6 +53,10 @@ export default function Application() {
               onChange={handleChange}
             />
             <Radio
+              label="Radio"
+              error="Error"
+              info="Info"
+              required={true}
               value={form.detaisdfdsafls}
               name="detaisdfdsafls"
               onChange={handleChange}
