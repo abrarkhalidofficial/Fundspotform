@@ -1,3 +1,12 @@
+:root {
+  --e-global-color-primary: #6ec1e4;
+  --e-global-color-secondary: #54595f;
+  --e-global-color-text: #7a7a7a;
+  --e-global-color-accent: #61ce70;
+  --e-global-color-9658649: #262262;
+  --e-global-color-c006b0e: #8d4fa0;
+  --e-global-color-977863c: #47bfa5;
+}
 *,
 *::after,
 *::before {
@@ -5,8 +14,116 @@
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--e-global-color-9658649);
+}
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+}
+.container {
+  background-image: linear-gradient(
+    180deg,
+    var(--e-global-color-9658649) 0%,
+    var(--e-global-color-c006b0e) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+.container__logo {
+  margin-bottom: 1em;
+}
+.container__logo img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+}
+.container__content {
+  max-width: 700px;
+  width: 100%;
+  margin: 0em auto;
+}
+.container__content__info {
+  background-color: #47bfa54d;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+.container__content__info__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+}
+.container__content__label {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  color: white;
+}
+.container__content__label__info {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 1em;
+  color: white;
+}
+.container__content__steps {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+.container__content__steps__step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  color: white;
+}
+.container__content__steps__step:last-child {
+  margin-bottom: 0;
+}
+.container__content__steps__step svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 1em;
+}
+.container__content__button {
+  background-color: #4ebfa5;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  color: white;
+  font-size: 1.4em;
+  width: 100%;
+  margin: 1em 0em;
+  cursor: pointer;
+}
+.container__content__button:hover {
+  transition: 300ms ease-in-out;
+  background-color: #358f7a;
+}
+.container__content__disclamer {
+  font-size: 0.8em;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.container__content__disclamer svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
 }
