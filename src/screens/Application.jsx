@@ -35,19 +35,65 @@ export default function Application() {
         {steps === 0 ? (
           <>
             <Input value={form.name} name="234234234" onChange={handleChange} />
+            <Select
+              options={[
+                "Business Cashflow",
+                "Setup / Expand Business",
+                "Renew Business Licence",
+                "Purchase Business Inventory / Equipment",
+                "Commercial Property Related",
+                "Other Business Use",
+              ]}
+              value={form.sdfsdf}
+              name="sdfsdf"
+              onChange={handleChange}
+            />{" "}
             <Textarea
               value={form.nsdfasdfame}
               name="nsdfasdfame"
               onChange={handleChange}
             />
+            <Checkbox
+              options={[
+                "Unsecured Business Funding",
+                "Bad Credit Business Funding",
+                "Start Up Business Funding",
+                "2nd Mortgage Business Funding",
+                "Caveat Business Funding",
+                "No Preference",
+              ]}
+              value={form.namasdfasdfe}
+              name="namasdfasdfe"
+              onChange={handleChange}
+            />
+          </>
+        ) : steps === 1 ? (
+          <>
             <Select
-              options={["Option 1", "Option 2", "Option 3"]}
+              options={[
+                "Planning to Start",
+                "Purchase Existing Business / Franchise",
+                "Trading Under 12 Months",
+                "Trading Over 12 Months",
+              ]}
               value={form.sdfsdf}
               name="sdfsdf"
               onChange={handleChange}
+            />{" "}
+            <Textarea
+              value={form.nsdfasdfame}
+              name="nsdfasdfame"
+              onChange={handleChange}
             />
             <Checkbox
-              options={["Option 1", "Option 2", "Option 3"]}
+              options={[
+                "Unsecured Business Funding",
+                "Bad Credit Business Funding",
+                "Start Up Business Funding",
+                "2nd Mortgage Business Funding",
+                "Caveat Business Funding",
+                "No Preference",
+              ]}
               value={form.namasdfasdfe}
               name="namasdfasdfe"
               onChange={handleChange}
@@ -63,8 +109,6 @@ export default function Application() {
               options={["Option 1", "Option 2", "Option 3"]}
             />
           </>
-        ) : steps === 1 ? (
-          <></>
         ) : steps === 2 ? (
           <></>
         ) : steps === 3 ? (

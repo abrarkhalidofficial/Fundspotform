@@ -19,10 +19,10 @@ export function Checkbox({ options, value, name, onChange }) {
   return (
     <div className="container__form__input">
       <label className="container__form__input__label">
-        Loan Amount <span>*</span>
+        Preferred Loan Product <span>*</span>
       </label>
       <div className="container__form__input__info">
-        Minimum loan amount is $3000
+        Please select from the following (more than one is ok):
       </div>
       <div className="container__form__input__options">
         {options.map((option) => (
