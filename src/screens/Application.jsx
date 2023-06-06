@@ -36,12 +36,12 @@ export default function Application() {
           <>
             <Input
               value={form.name}
-              name="Loan Amount "
-              label={"Loan Amount"}
+              name="loanAmount"
+              label="Loan Amount"
               required={true}
               placeholder={"Enter loan amount"}
-              info={"Minimum loan amount is $300     "}
-              error={"This is a required field             "}
+              info="Minimum loan amount is $300"
+              error={"This is a required field"}
               onChange={handleChange}
             />
             <Select
@@ -215,22 +215,22 @@ export default function Application() {
               label="Preferred Repayment Frequency"
               error={"This is a required field"}
               required={true}
-              value={form.detaisdfdsafls}
-              name="Preferred Repayment Frequency"
+              value={form.preferredRepaymentFrequency}
+              name="preferredRepaymentFrequency"
               onChange={handleChange}
               options={["Monthly", "Fortnightly", "Weekly"]}
-            />{" "}
+            />
             <Input
               value={form.name}
-              name="Preferred Weekly Repayment  "
-              label={"Preferred Weekly Repayment "}
+              name="preferredRepayment"
+              label={`Preferred ${form.preferredRepaymentFrequency} Repayment`}
               required={true}
-              placeholder={"Min $100"}
-              error={"This is a required field             "}
+              placeholder="Min $100"
+              error={"This is a required field"}
               onChange={handleChange}
             />
             <Select
-              label={"Preferred Loan Term"}
+              label="Preferred Loan Term"
               required={true}
               options={[
                 "Principal and Interest",
@@ -239,7 +239,7 @@ export default function Application() {
                 "Capitalisation",
               ]}
               value={form.sdfsdf}
-              name="Preferred Loan Term"
+              name="preferredLoanTerm"
               onChange={handleChange}
             />
             <Checkbox

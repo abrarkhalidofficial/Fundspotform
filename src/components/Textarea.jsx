@@ -12,7 +12,7 @@ export function Textarea({
       <label className="container__form__input__label">
         {label} {required && <span>*</span>}
       </label>
-      <div className="container__form__input__info">{info}</div>
+      {info && <div className="container__form__input__info">{info}</div>}
       <textarea
         value={value}
         name={name}
