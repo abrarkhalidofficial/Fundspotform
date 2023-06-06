@@ -1,4 +1,13 @@
-export function Input({ value, name, onChange, label, info, error, required }) {
+export function Input({
+  value,
+  name,
+  onChange,
+  label,
+  info,
+  error,
+  required,
+  placeholder,
+}) {
   return (
     <div className="container__form__input">
       <label className="container__form__input__label">
@@ -11,7 +20,7 @@ export function Input({ value, name, onChange, label, info, error, required }) {
         value={value}
         name={name}
         onChange={onChange}
-        placeholder="Enter loan amount"
+        placeholder={placeholder}
       />
       <div className="container__form__input__error">{error}</div>
     </div>
