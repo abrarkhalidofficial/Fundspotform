@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react";
 
-export function Checkbox({ options, value, name, onChange }) {
+export function Checkbox({
+  options,
+  name,
+  onChange,
+  value,
+  label,
+  info,
+  error,
+  required,
+}) {
   const [checked, setChecked] = useState(
     options.map((option) => option === value) || []
   );
@@ -19,11 +28,9 @@ export function Checkbox({ options, value, name, onChange }) {
   return (
     <div className="container__form__input">
       <label className="container__form__input__label">
-        Preferred Loan Product <span>*</span>
+        {label} {required && <span>*</span>}
       </label>
-      <div className="container__form__input__info">
-        Please select from the following (more than one is ok):
-      </div>
+      <div className="container__form__input__info">{info}</div>
       <div className="container__form__input__options">
         {options.map((option) => (
           <label key={option} className="container__form__input__option">
@@ -37,9 +44,7 @@ export function Checkbox({ options, value, name, onChange }) {
           </label>
         ))}
       </div>
-      <div className="container__form__input__error">
-        Please enter a valid amount
-      </div>
+      <div className="container__form__input__error">{error}</div>
     </div>
   );
 }

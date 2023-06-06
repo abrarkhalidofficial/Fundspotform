@@ -1,12 +1,18 @@
-export function Textarea({ value, name, onChange }) {
+export function Textarea({
+  value,
+  name,
+  onChange,
+  label,
+  info,
+  error,
+  required,
+}) {
   return (
     <div className="container__form__input">
       <label className="container__form__input__label">
-        Business Loan Details <span>*</span>
+        {label} {required && <span>*</span>}
       </label>
-      <div className="container__form__input__info">
-        Please describe your use for the funds.
-      </div>
+      <div className="container__form__input__info">{info}</div>
       <textarea
         value={value}
         name={name}
@@ -14,9 +20,7 @@ export function Textarea({ value, name, onChange }) {
         className="container__form__input__field"
         placeholder="Maximum 200 characters"
       />
-      <div className="container__form__input__error">
-        This is a required field.
-      </div>
+      <div className="container__form__input__error">{error}</div>
     </div>
   );
 }
